@@ -33,4 +33,16 @@ export INPUT_METHOD=fcitx
 EOF
 fi
 
+echo "Copy cấu hình Fish"
+sudo cp -fr ./fish ~/.config/
+
+echo "Copy Kvantum"
+sudo tar -xJf ./Kvantum/Layan.tar.xz -C /usr/share/Kvantum/
+sudo tar -xJf ./Kvantum/Layan-solid.tar.xz -C /usr/share/Kvantum/
+sudo tar -xJf ./Kvantum/Sweet.tar.xz -C /usr/share/Kvantum/
+sudo tar -xJf ./Kvantum/Sweet-Ambar-Blue.tar.xz -C /usr/share/Kvantum/
+sudo tar -xJf ./Kvantum/Sweet-Mars.tar.xz -C /usr/share/Kvantum/
+sudo tar -xJf ./Kvantum/Sweet-Mars-transparent-toolbar.tar.xz -C /usr/share/Kvantum/
+sudo tar -xJf ./Kvantum/Sweet-transparent-toolbar.tar.xz -C /usr/share/Kvantum/
+
 echo "Hoàn tất cài đặt!"
