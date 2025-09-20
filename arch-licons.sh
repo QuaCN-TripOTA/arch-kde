@@ -78,7 +78,7 @@ pacman -S --noconfirm \
     plasma-meta \
     sddm sddm-kcm \
     konsole dolphin dolphin-plugins spectacle ark gwenview kalk kate okular \
-    flatpak pacman-contrib \
+    flatpak pacman-contrib system-config-printer \
     pipewire pipewire-audio pipewire-alsa pipewire-jack wireplumber \
     bluez bluez-utils bluedevil \
     powerdevil power-profiles-daemon \
