@@ -77,7 +77,7 @@ echo "==> Cài KDE và các apps"
 pacman -S --noconfirm \
     plasma-meta \
     sddm sddm-kcm \
-    konsole dolphin dolphin-plugins spectacle ark gwenview kcalc okular \
+    konsole dolphin dolphin-plugins spectacle ark gwenview kalk kate okular \
     flatpak \
     pipewire pipewire-audio pipewire-alsa pipewire-jack wireplumber \
     bluez bluez-utils bluedevil \
