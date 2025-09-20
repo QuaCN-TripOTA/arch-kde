@@ -13,16 +13,16 @@ echo "LANG=en_US.UTF-8" > /etc/locale.conf
 
 echo "==> Hostname"
 echo "seiza" > /etc/hostname
-if ! grep -q "127.0.0.1 seiza.localdomain seiza" /etc/hosts; then
-    echo "127.0.0.1 seiza.localdomain seiza" >> /etc/hosts
+if ! grep -q "127.0.0.1 tripota.localdomain tripota" /etc/hosts; then
+    echo "127.0.0.1 tripota.localdomain tripota" >> /etc/hosts
 fi
 
 echo "==> Setup password for root"
 passwd
 
-echo "==> Create and setup password for user: licons"
-useradd -mG wheel licons
-passwd licons
+echo "==> Create and setup password for user: quacn"
+useradd -mG wheel quacn
+passwd quacn
 
 echo "==> Setup wheel"
 EDITOR=nano visudo
