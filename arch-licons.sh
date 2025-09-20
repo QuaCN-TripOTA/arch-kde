@@ -78,7 +78,7 @@ pacman -S --noconfirm \
     plasma-meta \
     sddm sddm-kcm \
     konsole dolphin dolphin-plugins spectacle ark gwenview kcalc okular \
-    plasma-discover packagekit-qt5 flatpak \
+    flatpak \
     pipewire pipewire-audio pipewire-alsa pipewire-jack wireplumber \
     bluez bluez-utils bluedevil \
     powerdevil power-profiles-daemon \
