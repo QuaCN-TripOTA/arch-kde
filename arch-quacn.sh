@@ -80,7 +80,7 @@ pacman -S --noconfirm \
     konsole dolphin dolphin-plugins spectacle ark gwenview kalk kate okular \
     flatpak pacman-contrib \
     pipewire pipewire-audio pipewire-alsa pipewire-jack wireplumber \
-    bluez bluez-utils bluedevil \
+    bluez bluez-utils bluedevil system-config-printer \
     powerdevil power-profiles-daemon \
     ufw ufw-extras \
     kvantum-qt5 fastfetch fish \
