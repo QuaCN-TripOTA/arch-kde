@@ -2,10 +2,17 @@
 
 set -e
 
+cd /tmp
+git clone https://aur.archlinux.org/yay
+cd yay
+makepkg -si --noconfirm
+cd /
+
 # Cập nhật hệ thống
 yay -Syu --noconfirm
 
 # Cài các phần mềm khác
+echo "==> Cài đặt phần mềm"
 yay -S --noconfirm \
   tela-circle-icon-theme \
   zen-browser-bin \
@@ -45,4 +52,17 @@ sudo tar -xJf ./Kvantum/Sweet-Mars.tar.xz -C /usr/share/Kvantum/
 sudo tar -xJf ./Kvantum/Sweet-Mars-transparent-toolbar.tar.xz -C /usr/share/Kvantum/
 sudo tar -xJf ./Kvantum/Sweet-transparent-toolbar.tar.xz -C /usr/share/Kvantum/
 
-echo "Hoàn tất cài đặt!"
+echo "==> Cài đặt DOTNET"
+wget -P ~/Downloads https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.414/dotnet-sdk-8.0.414-linux-x64.tar.gz
+sudo mkdir -p /usr/share/dotnet
+sudo tar -xzf ~/Downloads/dotnet-sdk-8.0.414-linux-x64.tar.gz -C /usr/share/dotnet/
+/home/licons
+sudo ln -sf /usr/share/dotnet/dotnet /usr/bin/dotnet
+dotnet --info
+dotnet tool update -g linux-dev-certs
+dotnet linux-dev-certs install
+dotnet dev-certs https --trust
+
+git config --global credential.helper store
+
+echo "Hoàn tất cài đặt Ứng dụng!"
