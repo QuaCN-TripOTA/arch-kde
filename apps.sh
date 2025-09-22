@@ -6,7 +6,7 @@ cd /tmp
 git clone https://aur.archlinux.org/yay
 cd yay
 makepkg -si --noconfirm
-cd /
+cd /tmp/arch-kde
 
 # Cập nhật hệ thống
 yay -Syu --noconfirm
