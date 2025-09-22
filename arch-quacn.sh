@@ -12,7 +12,7 @@ locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 
 echo "==> Hostname"
-echo "seiza" > /etc/hostname
+echo "tripota" > /etc/hostname
 if ! grep -q "127.0.0.1 tripota.localdomain tripota" /etc/hosts; then
     echo "127.0.0.1 tripota.localdomain tripota" >> /etc/hosts
 fi
