@@ -56,8 +56,8 @@ echo "==> Cài đặt DOTNET"
 wget -P ~/Downloads https://builds.dotnet.microsoft.com/dotnet/Sdk/8.0.414/dotnet-sdk-8.0.414-linux-x64.tar.gz
 sudo mkdir -p /usr/share/dotnet
 sudo tar -xzf ~/Downloads/dotnet-sdk-8.0.414-linux-x64.tar.gz -C /usr/share/dotnet/
-/home/licons
 sudo ln -sf /usr/share/dotnet/dotnet /usr/bin/dotnet
+
 dotnet --info
 dotnet tool update -g linux-dev-certs
 dotnet linux-dev-certs install
