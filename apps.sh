@@ -41,6 +41,16 @@ EOF
 fi
 
 echo "Copy cấu hình Fish"
+read -p "Enter your username: " username
+cat <<EOF > ./fish/config.fish
+if status is-interactive
+    fastfetch
+end
+
+set -g fish_greeting
+set -x DOTNET_CLI_TELEMETRY_OPTOUT 1
+set -gx PATH \$PATH /home/$username/.dotnet/tools
+EOF
 sudo cp -fr ./fish ~/.config/
 
 echo "Copy Kvantum"

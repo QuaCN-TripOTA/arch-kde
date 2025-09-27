@@ -12,17 +12,18 @@ locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 
 echo "==> Hostname"
-echo "tripota" > /etc/hostname
-if ! grep -q "127.0.0.1 tripota.localdomain tripota" /etc/hosts; then
-    echo "127.0.0.1 tripota.localdomain tripota" >> /etc/hosts
+echo "seiza" > /etc/hostname
+if ! grep -q "127.0.0.1 seiza.localdomain seiza" /etc/hosts; then
+    echo "127.0.0.1 seiza.localdomain seiza" >> /etc/hosts
 fi
 
 echo "==> Setup password for root"
 passwd
 
-echo "==> Create and setup password for user: quacn"
-useradd -mG wheel quacn
-passwd quacn
+read -p "Enter your username: " username
+echo "==> Create and setup password for user: $username"
+useradd -mG wheel "$username"
+passwd "$username"
 
 echo "==> Setup wheel"
 EDITOR=nano visudo
@@ -78,9 +79,9 @@ pacman -S --noconfirm \
     plasma-meta \
     sddm sddm-kcm \
     konsole dolphin dolphin-plugins spectacle ark gwenview kalk kate okular \
-    flatpak pacman-contrib \
+    flatpak pacman-contrib system-config-printer \
     pipewire pipewire-audio pipewire-alsa pipewire-jack wireplumber \
-    bluez bluez-utils bluedevil system-config-printer \
+    bluez bluez-utils bluedevil \
     powerdevil power-profiles-daemon \
     ufw ufw-extras \
     kvantum-qt5 fastfetch fish \
@@ -97,6 +98,6 @@ systemctl enable systemd-timesyncd
 systemctl enable docker
 systemctl enable fstrim.timer
 
-usermod -aG docker quacn
+usermod -aG docker licons
 
 echo "==> Install KDE and Apps completed!"
